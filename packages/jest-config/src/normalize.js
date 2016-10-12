@@ -340,6 +340,7 @@ function normalize(config, argv) {
         break;
       case 'cacheDirectory':
       case 'coverageDirectory':
+      case 'scriptPreprocessor': // FIXME remove when #1917 gets finished
       case 'setupTestFrameworkScriptFile':
       case 'testResultsProcessor':
       case 'testRunner':
