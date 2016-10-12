@@ -52,6 +52,7 @@ module.exports = ({
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.jsx?$',
   testURL: 'about:blank',
   timers: 'real',
+  transform: {},
   useStderr: false,
   verbose: null,
   watch: false,

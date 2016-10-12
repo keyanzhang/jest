@@ -46,6 +46,7 @@ export type DefaultConfig = {|
   testRegex: string,
   testURL: string,
   timers: 'real' | 'fake',
+  transform: {},
   useStderr: boolean,
   verbose: ?boolean,
   watch: boolean,
