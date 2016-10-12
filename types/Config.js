@@ -37,7 +37,7 @@ export type DefaultConfig = {|
   modulePathIgnorePatterns: Array<string>,
   noStackTrace: boolean,
   notify: boolean,
-  preprocessorIgnorePatterns: Array<string>,
+  preprocessorIgnorePatterns: Array<string>, // FIXME remove when #1917 gets finished
   preset: ?string,
   resetModules: boolean,
   testEnvironment: string,
@@ -47,6 +47,7 @@ export type DefaultConfig = {|
   testURL: string,
   timers: 'real' | 'fake',
   transform: {},
+  transformIgnorePatterns: Array<string>,
   useStderr: boolean,
   verbose: ?boolean,
   watch: boolean,

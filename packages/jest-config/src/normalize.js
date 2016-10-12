@@ -368,8 +368,9 @@ function normalize(config, argv) {
 
       case 'coveragePathIgnorePatterns':
       case 'modulePathIgnorePatterns':
-      case 'preprocessorIgnorePatterns':
+      case 'preprocessorIgnorePatterns': // FIXME remove this (#1917)
       case 'testPathIgnorePatterns':
+      case 'transformIgnorePatterns':
       case 'unmockedModulePathPatterns':
         // _replaceRootDirTags is specifically well-suited for substituting
         // <rootDir> in paths (it deals with properly interpreting relative path
