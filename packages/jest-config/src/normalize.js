@@ -340,7 +340,6 @@ function normalize(config, argv) {
         break;
       case 'cacheDirectory':
       case 'coverageDirectory':
-      case 'scriptPreprocessor': // FIXME remove when #1917 gets finished
       case 'setupTestFrameworkScriptFile':
       case 'testResultsProcessor':
       case 'testRunner':
@@ -368,7 +367,6 @@ function normalize(config, argv) {
 
       case 'coveragePathIgnorePatterns':
       case 'modulePathIgnorePatterns':
-      case 'preprocessorIgnorePatterns': // FIXME remove this (#1917)
       case 'testPathIgnorePatterns':
       case 'transformIgnorePatterns':
       case 'unmockedModulePathPatterns':

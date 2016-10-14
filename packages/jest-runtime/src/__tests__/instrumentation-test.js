@@ -27,6 +27,7 @@ it('instruments files', () => {
     cache: false,
     collectCoverage: true,
     rootDir: '/',
+    transform: [],
   };
   const instrumented = transform(FILE_PATH_TO_INSTRUMENT, config);
   expect(instrumented instanceof vm.Script).toBe(true);

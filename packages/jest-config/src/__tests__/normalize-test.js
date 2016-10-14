@@ -577,7 +577,7 @@ describe('normalize', () => {
       });
 
       expect(config.usesBabelJest).toEqual(undefined);
-      expect(config.transform).toEqual({});
+      expect(config.transform).toEqual([]);
       expect(config.setupFiles).toEqual([]);
     });
 

@@ -44,7 +44,6 @@ module.exports = ({
   noStackTrace: false,
   notify: false,
   preset: null,
-  preprocessorIgnorePatterns: [NODE_MODULES_REGEXP], // FIXME remove (#1917)
   resetModules: false,
   testEnvironment: 'jest-environment-jsdom',
   testPathDirs: ['<rootDir>'],
@@ -52,7 +51,7 @@ module.exports = ({
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.jsx?$',
   testURL: 'about:blank',
   timers: 'real',
-  transform: {},
+  transform: [],
   transformIgnorePatterns: [NODE_MODULES_REGEXP],
   useStderr: false,
   verbose: null,

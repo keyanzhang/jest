@@ -468,7 +468,7 @@ class Runtime {
             `for example it should include the 'es2015' preset.\n`
           : '';
         /* eslint-disable max-len */
-        throw new SyntaxError(
+        throw new SyntaxError( // TODO
           `${e.message} in file '${relative(filename)}'.\n\n` +
           `Make sure your preprocessor is set up correctly and ensure ` +
           `your 'preprocessorIgnorePatterns' configuration is correct: http://facebook.github.io/jest/docs/configuration.html#preprocessorignorepatterns-array-string\n` +
@@ -648,9 +648,15 @@ class Runtime {
     from: Path,
     options: ?InternalModuleOptions,
   ) {
+    // console.log(options);
     const moduleRequire = options && options.isInternalModule
       ? (moduleName: string) => this.requireInternalModule(from, moduleName)
-      : this.requireModuleOrMock.bind(this, from);
+      : (moduleName: string) => { // TODO
+        // if (!moduleName) {
+        //   throw new Error('?');
+        // }
+        return this.requireModuleOrMock(from, moduleName);
+      };
     moduleRequire.cache = Object.create(null);
     moduleRequire.extensions = Object.create(null);
     moduleRequire.requireActual = this.requireModule.bind(this, from);

@@ -104,8 +104,9 @@ describe('transform', () => {
       cache: true,
       cacheDirectory: '/cache/',
       name: 'test',
-      preprocessorIgnorePatterns: ['/node_modules/'],
+      transformIgnorePatterns: ['/node_modules/'],
       rootDir: '/',
+      transform: [],
     };
 
     transform = require('../transform');
@@ -150,7 +151,7 @@ describe('transform', () => {
 
   it('uses the supplied preprocessor', () => {
     config = Object.assign(config, {
-      scriptPreprocessor: 'test-preprocessor',
+      transform: {'.*': './test-preprocessor'},
     });
 
     transform('/fruits/banana.js', config);
@@ -169,7 +170,7 @@ describe('transform', () => {
       return;
     }
     const transformConfig = Object.assign(config, {
-      scriptPreprocessor: 'test-preprocessor',
+      transform: {'.*': './test-preprocessor'},
     });
     transform('/fruits/banana.js', transformConfig);
 
